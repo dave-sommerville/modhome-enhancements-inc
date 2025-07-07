@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dave Sommerville">
+    <meta name="description" content="Dave Sommerville">
+    <meta name="theme-color" content="#ffffff">
+    <title></title>
+    <link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
+    
+    <!-- External stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Local Stylesheets -->
+    <link rel="stylesheet" href="./src/css/reset.css" media="all">
+    <link rel="stylesheet" href="./src/css/app.css" media="all">
+    
+    <script src="./src/js/app.js" defer></script>
+</head>
+<body>
+    <header class="f-col container">
+      <button class="btn">Reach Out</button>
+      <buuton class="btn">Learn More</buuton>
+    </header>
+    <main class="container">
+        <section class="contact">
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <!-- Honeypot field (anti-spam) -->
+    <input type="hidden" name="form-name" value="contact">
+    <p hidden>
+      <label>Don't fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <p>
+      <label>Your Name:<br>
+        <input type="text" name="name" required>
+      </label>
+    </p>
+
+    <p>
+      <label>Your Email:<br>
+        <input type="email" name="email" required>
+      </label>
+    </p>
+
+    <p>
+      <label>Message:<br>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+        </section>
+        <section class="about">
+          <article>
+            <img src="./src/img/user.svg">
+            <p>
+              Reliable, skilled and detailed oriented, Burke brings over 10 years of experience in home repairs, remodeling and renovations. From fixing the small stuff to transforming entire rooms, He takes pride in delivering quality workmanship and friendly service. Whether it's carpentry, drywall, painting or flooring, he is here to help make any home improvement project hassle-free and built to last.
+            </p>
+          </article>
+          <article>
+            <p>
+              Passionate about creating beautiful spaces, Jodi a self-taught designer with a keen eye for style, balance and comfort. With a background shaped by hands-on experience, personal projects and an instinct for design we help clients transform their homes into reflections of their personality and lifestyle.
+            </p>
+            <img src="./src/img/user.svg">
+          </article>
+        </section>
+    </main>
+
+    <!-- <footer>
+    </footer> -->
+</body>
+</html>
