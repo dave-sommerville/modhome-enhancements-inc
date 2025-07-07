@@ -23,57 +23,69 @@
     <script src="./src/js/app.js" defer></script>
 </head>
 <body>
-    <header class="f-col container">
-      <button class="btn">Reach Out</button>
-      <buuton class="btn">Learn More</buuton>
-    </header>
-    <main class="container">
-        <section class="contact">
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <!-- Honeypot field (anti-spam) -->
-    <input type="hidden" name="form-name" value="contact">
-    <p hidden>
-      <label>Don't fill this out: <input name="bot-field" /></label>
-    </p>
+  <header class="f-col container center">
+    <h1>Hero Banner with call to action</h1>
+    <img src="./src/img/logo.jpg" alt="" class="logo">
+    <button class="btn">Reach Out</button>
+    <button class="btn secondary">Learn More</buuton>
+  </header>
+  <main class="container">
+    <h2>
+      Contact Page (will be in separate section)(^Will have a nav bar at top of pages)
+    </h2>
+    <section class="contact">
+      <form 
+        class="contact-form"
+        name="contact" 
+        method="POST" 
+        data-netlify="true" 
+        netlify-honeypot="bot-field">
+        <!-- Honeypot field (anti-spam) -->
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden>
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <p>
+          <label>Your Name:<br>
+            <input type="text" name="name" required>
+          </label>
+        </p>
 
-    <p>
-      <label>Your Name:<br>
-        <input type="text" name="name" required>
-      </label>
-    </p>
+        <p>
+          <label>Your Email:<br>
+            <input type="email" name="email" required>
+          </label>
+        </p>
 
-    <p>
-      <label>Your Email:<br>
-        <input type="email" name="email" required>
-      </label>
-    </p>
+        <p>
+          <label>Message:<br>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+        </p>
 
-    <p>
-      <label>Message:<br>
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-    </p>
-
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
-        </section>
-        <section class="about">
-          <article>
-            <img src="./src/img/user.svg">
-            <p>
-              Reliable, skilled and detailed oriented, Burke brings over 10 years of experience in home repairs, remodeling and renovations. From fixing the small stuff to transforming entire rooms, He takes pride in delivering quality workmanship and friendly service. Whether it's carpentry, drywall, painting or flooring, he is here to help make any home improvement project hassle-free and built to last.
-            </p>
-          </article>
-          <article>
-            <p>
-              Passionate about creating beautiful spaces, Jodi a self-taught designer with a keen eye for style, balance and comfort. With a background shaped by hands-on experience, personal projects and an instinct for design we help clients transform their homes into reflections of their personality and lifestyle.
-            </p>
-            <img src="./src/img/user.svg">
-          </article>
-        </section>
-    </main>
+        <p>
+          <button type="submit" class="btn">Send</button>
+        </p>
+      </form>
+    </section>
+    <h2>About Section (will be in separate section)</h2>
+    <section class="about f-col center">
+      <article>
+        <img src="./src/img/user.svg">
+        <p>
+          Reliable, skilled and detailed oriented, Burke brings over 10 years of experience in home repairs, remodeling and renovations. From fixing the small stuff to transforming entire rooms, He takes pride in delivering quality workmanship and friendly service. Whether it's carpentry, drywall, painting or flooring, he is here to help make any home improvement project hassle-free and built to last.
+        </p>
+      </article>
+      <article class="reverse">
+        <p>
+          Passionate about creating beautiful spaces, Jodi a self-taught designer with a keen eye for style, balance and comfort. With a background shaped by hands-on experience, personal projects and an instinct for design we help clients transform their homes into reflections of their personality and lifestyle.
+        </p>
+        <img src="./src/img/user.svg">
+      </article>
+      <h2>Can have before/after gallery here</h2>
+      <div class="gallery"></div>
+    </section>
+  </main>
 
     <!-- <footer>
     </footer> -->
