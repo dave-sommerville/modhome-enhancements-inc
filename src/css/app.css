@@ -8,7 +8,7 @@
   --clr-bg: #012;
   --clr-bg-secondary: #234;
   --clr-light: #fefefe;
-  --clr-primary: #fe521d;
+  --clr-primary: #1c4a7e;
   --clr-accent: #31569b;
   --clr-dark: #012;
   --app-border-rad: 6px;
@@ -67,8 +67,8 @@ ul {
   Main Code
 <-----------------------------------------------------------*/
 body {
-  background-color: #012;
-  color: #fefefe;
+  background-color: var(--clr-bg);
+  color: var(--clr-light);
   font-family: "Inter", "Poppins", sans-serif;
 }
 
@@ -79,7 +79,6 @@ header {
   background: url('../img/reno3.jpg') no-repeat center center;
   background-size: cover;
   z-index: 0;
-  color: white; /* ensure contrast */
 }
 
 header::before {
@@ -94,6 +93,7 @@ header::before {
   height: 300px;
   border-radius: var(--app-border-rad);
   margin-bottom: var(--app-spacing);
+  box-shadow: -2px 2px 3px #00112280, -3px 3px 4px #fefefe30;
 }
 .work {
   display: flex;
@@ -153,11 +153,13 @@ header::before {
   border: none;
   margin-bottom: var(--app-spacing);
   background-color: var(--clr-primary);
-  color: #012;
+  color: var(--clr-light);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: -2px 2px 3px #00112280, -3px 3px 4px #fefefe30;
 }
+
 .btn.secondary {
   background-color: transparent;
   border: solid 2px var(--clr-primary);
@@ -165,7 +167,7 @@ header::before {
   font-weight: 700;
 }
 .btn:hover {
-  box-shadow: 1px 1px 2px #fefefe49;
+  box-shadow: -3px 3px 3px #00112280, -4px 4px 4px #fefefe30;
   transform: translateY(-2px);
 }
 
@@ -197,18 +199,19 @@ h2 {
   border-radius: 8px;
 }
 
-.nav-button {
+.gallery-btn {
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
+  border-radius: var(--app-border-rad);
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
-  transition: background 0.3s ease;
+  transition: var(--app-transition);
 }
 
-.nav-button:hover {
+.gallery-btn:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -219,24 +222,28 @@ h2 {
 .right {
   margin-left: 10px;
 }
-.nav-buttons {
+.nav-btns {
+  width: 100svw;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
   position: sticky;
   top: 10px;
-  left: 50%;
-  transform: translateX(50%);
+  left: 10px;
   z-index: 10;
 }
 
-.nav-buttons button {
+.nav-btns button {
+  width: 40svw;
   margin: 0 5px;
   padding: 0.5em 1em;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  background: #333;
-  color: white;
-  border-radius: 4px;
-  transition: background 0.3s;
+  background: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: var(--app-border-rad);
+  transition: var(--app-transition);
 }
 
 .nav-buttons button:hover {
@@ -251,7 +258,8 @@ h2 {
 
 .slider-wrapper {
   display: flex;
-  width: 400%; /* 4 slides */
+  justify-content: center;
+  width: 200%;
   height: 100%;
   transition: transform 0.6s ease;
 }
@@ -264,6 +272,9 @@ h2 {
   align-items: center;
   justify-content: center;
   color: #fefefe;
+}
+footer{
+  height: 20px;
 }
 @media(max-width: 875px) {
   .work{

@@ -44,7 +44,7 @@ listen('click', nextButton, () => {
 });
 
 const wrapper = select('.slider-wrapper');
-const buttons = document.querySelectorAll('.nav-buttons button');
+const buttons = document.querySelectorAll('.nav-btns button');
 
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
