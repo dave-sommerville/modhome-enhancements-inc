@@ -137,6 +137,7 @@ header::before {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    font-size: 1.2rem;
     img {
       width: 300px;
       height: 300px;
@@ -179,7 +180,6 @@ h2 {
   position: relative;
   width: 80%;
   max-width: 600px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -201,13 +201,14 @@ h2 {
 
 .gallery-btn {
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #fefefe;
   border: none;
   border-radius: var(--app-border-rad);
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
+  position: relative;
   transition: var(--app-transition);
 }
 
@@ -297,7 +298,32 @@ footer{
       flex-direction: column-reverse;
     }
   }
+  .logo {
+    height: 200px;
+  }
   .gallery {
     width: 95svw;
+  }
+  .left {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    z-index: 1000;
+  }
+    .right {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    z-index: 1000;
+  }
+  .about article {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    p {
+      width: 350px;
+      font-size: 1rem;
+    }
   }
 }
